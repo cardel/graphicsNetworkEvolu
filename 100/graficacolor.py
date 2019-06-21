@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 from matplotlib import cm
 from matplotlib.ticker import LinearLocator, FormatStrFormatter
 import numpy as np
-plt.rc('xtick',labelsize=8)
-plt.rc('ytick',labelsize=8)
+plt.rc('xtick',labelsize=6)
+plt.rc('ytick',labelsize=6)
 
 
 #Caso SWHD
@@ -28,12 +28,12 @@ ax = fig.add_subplot(2, 2, 1, projection='3d')
 surf = ax.plot_surface(x, y, z, cmap=cm.coolwarm,
                        linewidth=0, antialiased=True, label="SWHD")
                        
-fig.colorbar(surf, shrink=0.5, aspect=5)
+#fig.colorbar(surf, shrink=0.5, aspect=5)
 ax.zaxis.set_major_locator(LinearLocator(10))
 ax.zaxis.set_major_formatter(FormatStrFormatter('%.02f'))
 ax.set_title(u'Estrategias swbest', fontsize=8)
-plt.xlabel(u"Iteración")
-plt.ylabel(u"Tiempo")
+plt.xlabel(u"Iteración", fontsize=7)
+plt.ylabel(u"Tiempo", fontsize=7)
 #Caso 
 
 x = np.array([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30])
@@ -56,13 +56,13 @@ surf2= ax.plot_surface(x, y, z, cmap=cm.coolwarm,
 ax.zaxis.set_major_locator(LinearLocator(10))
 ax.zaxis.set_major_formatter(FormatStrFormatter('%.02f'))
 
-plt.xlabel(u"Iteración")
-plt.ylabel(u"Tiempo")
+plt.xlabel(u"Iteración", fontsize=7)
+plt.ylabel(u"Tiempo", fontsize=7)
 #plt.zlabel(u"Fitness")
 ax.set_title(u'Estrategia swhd', fontsize=8)
 
 # Add a color bar which maps values to colors.
-fig.colorbar(surf2, shrink=0.5, aspect=5)
+#fig.colorbar(surf2, shrink=0.5, aspect=5)
 
 
 #otra swnormal
@@ -86,14 +86,14 @@ surf2= ax.plot_surface(x, y, z, cmap=cm.coolwarm,
 ax.zaxis.set_major_locator(LinearLocator(10))
 ax.zaxis.set_major_formatter(FormatStrFormatter('%.02f'))
 
-plt.xlabel(u"Iteración")
-plt.ylabel(u"Tiempo")
+plt.xlabel(u"Iteración", fontsize=7)
+plt.ylabel(u"Tiempo", fontsize=7)
 #plt.zlabel(u"Fitness")
 ax.set_title(u'Estrategia sw normal', fontsize=8)
 
 
 # Add a color bar which maps values to colors.
-fig.colorbar(surf2, shrink=0.5, aspect=5)
+#fig.colorbar(surf2, shrink=0.5, aspect=5)
 
 #otra evolutivo
 
@@ -117,12 +117,12 @@ surf2= ax.plot_surface(x, y, z, cmap=cm.coolwarm,
 ax.zaxis.set_major_locator(LinearLocator(10))
 ax.zaxis.set_major_formatter(FormatStrFormatter('%.02f'))
 
-plt.xlabel(u"Iteración")
-plt.ylabel(u"Tiempo")
+plt.xlabel(u"Iteración", fontsize=7)
+plt.ylabel(u"Tiempo", fontsize=7)
 #plt.zlabel(u"Fitness")
 ax.set_title(u'Estrategia evolutiva', fontsize=8)
 
 # Add a color bar which maps values to colors.
-fig.colorbar(surf2, shrink=0.5, aspect=5)
+#fig.colorbar(surf2, shrink=0.5, aspect=5)
 
 plt.savefig("color.png")
