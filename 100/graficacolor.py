@@ -31,8 +31,9 @@ surf = ax.plot_surface(x, y, z, cmap=cm.coolwarm,
 fig.colorbar(surf, shrink=0.5, aspect=5)
 ax.zaxis.set_major_locator(LinearLocator(10))
 ax.zaxis.set_major_formatter(FormatStrFormatter('%.02f'))
-ax.set_title(u'Estrategias swbest', fontsize=10)
-
+ax.set_title(u'Estrategias swbest', fontsize=8)
+plt.xlabel(u"Iteración")
+plt.ylabel(u"Tiempo")
 #Caso 
 
 x = np.array([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30])
@@ -58,7 +59,7 @@ ax.zaxis.set_major_formatter(FormatStrFormatter('%.02f'))
 plt.xlabel(u"Iteración")
 plt.ylabel(u"Tiempo")
 #plt.zlabel(u"Fitness")
-ax.set_title(u'Estrategia swhd', fontsize=10)
+ax.set_title(u'Estrategia swhd', fontsize=8)
 
 # Add a color bar which maps values to colors.
 fig.colorbar(surf2, shrink=0.5, aspect=5)
@@ -88,7 +89,7 @@ ax.zaxis.set_major_formatter(FormatStrFormatter('%.02f'))
 plt.xlabel(u"Iteración")
 plt.ylabel(u"Tiempo")
 #plt.zlabel(u"Fitness")
-ax.set_title(u'Estrategia sw normal', fontsize=10)
+ax.set_title(u'Estrategia sw normal', fontsize=8)
 
 
 # Add a color bar which maps values to colors.
@@ -119,7 +120,7 @@ ax.zaxis.set_major_formatter(FormatStrFormatter('%.02f'))
 plt.xlabel(u"Iteración")
 plt.ylabel(u"Tiempo")
 #plt.zlabel(u"Fitness")
-ax.set_title(u'Estrategia evolutiva', fontsize=10)
+ax.set_title(u'Estrategia evolutiva', fontsize=8)
 
 # Add a color bar which maps values to colors.
 fig.colorbar(surf2, shrink=0.5, aspect=5)
