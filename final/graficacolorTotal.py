@@ -21,7 +21,7 @@ y = np.array([0.248452218,0.4716893,0.686718313,0.897217822,1.105355,1.312520337
 x, y = np.meshgrid(x, y)
 
 #Size figure 16 width x 8 height
-fig = plt.figure(figsize=(7,7))
+fig = plt.figure(figsize=(8,8))
 
 ax = fig.add_subplot(2, 2, 1, projection='3d')
 
@@ -30,11 +30,13 @@ surf = ax.plot_surface(x, y, z, cmap=cm.coolwarm,
                        linewidth=0, antialiased=True, label="SWHD")
                        
 #fig.colorbar(surf, shrink=0.5, aspect=5)
-ax.zaxis.set_major_locator(LinearLocator(10))
+#ax.zaxis.set_major_locator(LinearLocator(10))
 ax.zaxis.set_major_formatter(FormatStrFormatter('%d'))
-ax.set_title(u'a)', fontsize=11)
-plt.xlabel(u"Iteración", fontsize=9)
-plt.ylabel(u"Tiempo", fontsize=9)
+ax.tick_params(labelsize=10)
+ax.set_title(u'a)', fontsize=11, y=-0.2)
+ax.set_xlabel(u"Iteration", fontsize=10)
+ax.set_ylabel(u"\nTime", fontsize=10)
+ax.set_zlabel(u"\n\nFitness", fontsize=10)
 
 
 #otra evolutivo
@@ -58,14 +60,14 @@ surf2= ax.plot_surface(x, y, z, cmap=cm.coolwarm,
 
 # Customize the z axis.
 #ax.set_zlim(-1.01, 1.01)
-ax.zaxis.set_major_locator(LinearLocator(10))
+#ax.zaxis.set_major_locator(LinearLocator(10))
 ax.zaxis.set_major_formatter(FormatStrFormatter('%d'))
 
-plt.xlabel(u"Iteración", fontsize=9)
-plt.ylabel(u"Tiempo", fontsize=9)
-#plt.zlabel(u"Fitness")
-ax.set_title(u'b)', fontsize=11)
-
+ax.set_xlabel(u"Iteration", fontsize=10)
+ax.set_ylabel(u"\nTime", fontsize=10)
+ax.set_zlabel(u"\n\nFitness", fontsize=10)
+ax.set_title(u'b)', fontsize=11, y=-0.2)
+ax.tick_params(labelsize=10)
 # Add a color bar which maps values to colors.
 #fig.colorbar(surf2, shrink=0.5, aspect=5)
 
@@ -92,13 +94,14 @@ ax = fig.add_subplot(2, 2, 3, projection='3d')
 surf = ax.plot_surface(x, y, z, cmap=cm.coolwarm,
                        linewidth=0, antialiased=True, label="SWHD")
 
-plt.xlabel(u"Iteración", fontsize=9)
-plt.ylabel(u"Tiempo", fontsize=9)                       
+ax.set_xlabel(u"Iteration", fontsize=10)
+ax.set_ylabel(u"\nTime", fontsize=10)
+ax.set_zlabel(u"\n\nFitness", fontsize=10)                    
 #fig.colorbar(surf, shrink=1,orientation='horizontal', aspect=20)
-ax.zaxis.set_major_locator(LinearLocator(10))
+#ax.zaxis.set_major_locator(LinearLocator(10))
 ax.zaxis.set_major_formatter(FormatStrFormatter('%d'))
-ax.set_title(u'c)', fontsize=11)
-
+ax.set_title(u'c)', fontsize=11, y=-0.2)
+ax.tick_params(labelsize=10)
 
 #otra evolutivo
 
@@ -119,14 +122,14 @@ surf2= ax.plot_surface(x, y, z, cmap=cm.coolwarm,
 
 # Customize the z axis.
 #ax.set_zlim(-1.01, 1.01)
-ax.zaxis.set_major_locator(LinearLocator(10))
+#ax.zaxis.set_major_locator(LinearLocator(10))
 ax.zaxis.set_major_formatter(FormatStrFormatter('%d'))
 
-plt.xlabel(u"Iteración", fontsize=9)
-plt.ylabel(u"Tiempo", fontsize=9)
-#plt.zlabel(u"Fitness")
-ax.set_title(u'd)', fontsize=11)
-
+ax.set_xlabel(u"Iteration", fontsize=10)
+ax.set_ylabel(u"\nTime", fontsize=10)
+ax.set_zlabel(u"\n\nFitness", fontsize=10)
+ax.set_title(u'd)', fontsize=11, y=-0.2)
+ax.tick_params(labelsize=10)
 
 
 
